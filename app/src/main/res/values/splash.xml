@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.KedaiOnchyApp.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/kedai_onchy_logo</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+
+        <!-- Setelah splash selesai, pindah ke theme utama -->
+        <item name="postSplashScreenTheme">@style/Theme.KedaiOnchyApp</item>
+    </style>
+
+</resources>

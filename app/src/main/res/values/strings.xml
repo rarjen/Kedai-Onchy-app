@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Kedai Onchy</string>
+    <string name="version_app">1.0.0</string>
+    <string name="logout_text">Logout</string>
+
+    <string name="description_referral_icon_card">Referral Icon</string>
+    <string name="percentage_icon">Percentage Icon</string>
+    <string name="description_wa_icon">WhatsApp Logo</string>
+
+
+    <string name="title_referral_icon_card">Share the taste</string>
+    <string name="description_raferral_icon_card">Bagikan kode referral, dapatkan hadiah</string>
+
+    <string name="shipping_voucher">Voucher Delivery</string>
+    <string name="shopping_voucher">Voucher Belanja</string>
+
+    <string name="customer_service_phone_number">0812-7777-7621</string>
+
+</resources>

@@ -43,6 +43,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.kedaionchyapp.R
+import com.example.kedaionchyapp.ui.components.PasswordTextField
 import com.example.kedaionchyapp.ui.navigation.Screen
 import com.example.kedaionchyapp.ui.theme.GoldChinese
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
@@ -137,29 +138,39 @@ fun RegisterScreen(navController: NavController) {
                 )
 
                 // Field Password
-                OutlinedTextField(
-                    value = password,
-                    onValueChange = { password = it },
-                    label = { Text(text = "Password") },
-                    shape = RoundedCornerShape(10.dp),
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
-                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                    visualTransformation = PasswordVisualTransformation(),
-                    colors = customTextFieldColors,
-                    singleLine = true
+//                OutlinedTextField(
+//                    value = password,
+//                    onValueChange = { password = it },
+//                    label = { Text(text = "Password") },
+//                    shape = RoundedCornerShape(10.dp),
+//                    modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp),
+//                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+//                    visualTransformation = PasswordVisualTransformation(),
+//                    colors = customTextFieldColors,
+//                    singleLine = true
+//                )
+                PasswordTextField(
+                    label = "Password",
+                    contentDescription = "password"
                 )
 
+
                 // Field Konfirmasi Password
-                OutlinedTextField(
-                    value = confirmPassword,
-                    onValueChange = { confirmPassword = it },
-                    label = { Text(text = "Konfirmasi Password") },
-                    shape = RoundedCornerShape(10.dp),
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
-                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                    visualTransformation = PasswordVisualTransformation(),
-                    colors = customTextFieldColors,
-                    singleLine = true
+//                OutlinedTextField(
+//                    value = confirmPassword,
+//                    onValueChange = { confirmPassword = it },
+//                    label = { Text(text = "Konfirmasi Password") },
+//                    shape = RoundedCornerShape(10.dp),
+//                    modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
+//                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
+//                    visualTransformation = PasswordVisualTransformation(),
+//                    colors = customTextFieldColors,
+//                    singleLine = true
+//                )
+
+                PasswordTextField(
+                    label = "Konfirmasi Password",
+                    contentDescription = "konfirmasi password"
                 )
 
                 // Button Daftar

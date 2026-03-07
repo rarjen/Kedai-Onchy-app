@@ -10,7 +10,7 @@ data class VoucherShipping(
     val voucherDescription: String,
     val expiredDate: LocalDate,
 
+    val maxRadius: Int,
     val minimumTransactionTotal: BigDecimal,
-    val maximumVoucherCoverage: BigDecimal,
-    val discountPercentage: BigDecimal,
+    val totalDiscount: BigDecimal,
 )

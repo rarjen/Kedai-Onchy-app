@@ -33,10 +33,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.kedaionchyapp.R
+import com.example.kedaionchyapp.data.FakeVoucherShipping
 import com.example.kedaionchyapp.data.FakeVoucherShopping
+import com.example.kedaionchyapp.data.local.model.VoucherShipping
 import com.example.kedaionchyapp.data.local.model.VoucherShopping
 import com.example.kedaionchyapp.ui.components.voucher.HeaderVoucherSection
 import com.example.kedaionchyapp.ui.components.voucher.VoucherDiscountCard
+import com.example.kedaionchyapp.ui.components.voucher.VoucherShippingCard
 import com.example.kedaionchyapp.ui.theme.DeepJade
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 import com.example.kedaionchyapp.ui.theme.SoftGold
@@ -44,11 +47,18 @@ import com.example.kedaionchyapp.ui.theme.SoftGold
 @Composable
 fun VoucherScreen(
     onCardClick: () -> Unit,
-    voucherShoppingDataList: List<VoucherShopping>
+    voucherShoppingDataList: List<VoucherShopping>,
+    voucherShippingDataList: List<VoucherShipping>
 ) {
 
     val totalVoucherShopping = if (voucherShoppingDataList.isNotEmpty()) {
         voucherShoppingDataList.size
+    } else {
+        0
+    }
+
+    val totalVoucherShipping = if (voucherShippingDataList.isNotEmpty()) {
+        voucherShippingDataList.size
     } else {
         0
     }
@@ -119,6 +129,17 @@ fun VoucherScreen(
         items(voucherShoppingDataList) {data ->
             VoucherDiscountCard(data = data)
         }
+
+        item {
+            HeaderVoucherSection(
+                title = stringResource(R.string.shipping_voucher),
+                count = totalVoucherShipping
+            )
+        }
+
+        items(voucherShippingDataList) { data ->
+            VoucherShippingCard(data = data)
+        }
     }
 }
 
@@ -128,7 +149,8 @@ private fun VoucherScreenPreview(){
     KedaiOnchyAppTheme() {
         VoucherScreen(
             onCardClick = { /*TODO*/ },
-            voucherShoppingDataList = FakeVoucherShopping.dummyVoucherShopping
+            voucherShoppingDataList = FakeVoucherShopping.dummyVoucherShopping,
+            voucherShippingDataList = FakeVoucherShipping.dummyVoucherShipping
         )
     }
 }

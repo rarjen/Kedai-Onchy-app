@@ -31,8 +31,12 @@ import androidx.compose.ui.unit.dp
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 import com.example.kedaionchyapp.ui.theme.RedChinese
 import coil.compose.AsyncImage
+import com.example.kedaionchyapp.ui.theme.DeepJade
 import com.example.kedaionchyapp.ui.theme.GoldChinese
+import com.example.kedaionchyapp.ui.theme.IvoryCream
+import com.example.kedaionchyapp.ui.theme.LightGold
 import com.example.kedaionchyapp.ui.theme.OrangeChinese
+import com.example.kedaionchyapp.ui.theme.PremiumGold
 
 @Composable
 
@@ -44,7 +48,7 @@ fun ClickableCardProfile(
 ){
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = OrangeChinese
+            containerColor = DeepJade
         ),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth().height(110.dp).padding(bottom = 16.dp),
@@ -69,7 +73,7 @@ fun ClickableCardProfile(
                         .size(60.dp)
                         .border(
                             width = 2.dp,
-                            color = RedChinese,
+                            color = LightGold,
                             shape = CircleShape
                         )
                         .clip(CircleShape)
@@ -83,13 +87,13 @@ fun ClickableCardProfile(
                 ) {
                     Text(
                         text = fullNameUser.uppercase(),
-                        color = Color.White,
+                        color = IvoryCream,
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
                         text = phoneNumberUser,
-                        color = Color.White,
-                        fontWeight = FontWeight.SemiBold
+                        color = PremiumGold,
+                        fontWeight = FontWeight.Light
                     )
                 }
             }

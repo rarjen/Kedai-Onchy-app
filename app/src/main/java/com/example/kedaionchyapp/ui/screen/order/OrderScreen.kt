@@ -40,7 +40,7 @@ fun OrderScreen() {
         // Daftar Card menggunakan LazyColumn
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(horizontal = 28.dp, vertical = 8.dp),
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp) // Jarak antar card
         ) {
             items(FakeOrderData.dummyOrder) { order ->

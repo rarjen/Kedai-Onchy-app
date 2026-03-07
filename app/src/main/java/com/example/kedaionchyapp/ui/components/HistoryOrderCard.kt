@@ -49,6 +49,7 @@ import androidx.compose.ui.unit.sp
 import com.example.kedaionchyapp.R
 import com.example.kedaionchyapp.data.FakeOrderData
 import com.example.kedaionchyapp.data.local.model.OrderHistory
+import com.example.kedaionchyapp.ui.theme.ElegantBlack
 import com.example.kedaionchyapp.ui.theme.GoldChinese
 import com.example.kedaionchyapp.ui.theme.GoldChineseLight
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
@@ -96,7 +97,7 @@ fun HistoryOrderCard(
 
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = Color.Black
+            containerColor = ElegantBlack
         ),
         border = BorderStroke(2.dp, GoldChinese),
         modifier = Modifier.fillMaxWidth().height(215.dp),

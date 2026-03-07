@@ -9,6 +9,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.compose.*
+import com.example.kedaionchyapp.data.FakeVoucherShipping
+import com.example.kedaionchyapp.data.FakeVoucherShopping
 import com.example.kedaionchyapp.ui.components.CustomBottomBar
 import com.example.kedaionchyapp.ui.components.CustomTopBar
 import com.example.kedaionchyapp.ui.navigation.Screen
@@ -61,9 +63,19 @@ fun MainApp() {
         ) {
 
             composable(Screen.Home.route) { HomeScreen() }
-//            composable(Screen.Voucher.route) { VoucherScreen() }
+            composable(Screen.Voucher.route) { VoucherScreen(
+                onCardClick = { /*TODO*/ },
+                voucherShoppingDataList = FakeVoucherShopping.dummyVoucherShopping,
+                voucherShippingDataList = FakeVoucherShipping.dummyVoucherShipping
+            ) }
             composable(Screen.Order.route) { OrderScreen() }
-//            composable(Screen.Profile.route) { ProfileScreen() }
+            composable(Screen.Profile.route) { ProfileScreen(
+                profilePicture = "https://ik.imagekit.io/6v306xm58/218.jpg",
+                fullNameUser = "Mulyono Sukajabat",
+                phoneNumberUser = "+6281264008731",
+                onProfileCardClick = { /*TODO*/ },
+                onCardCustomerServiceClick = { /*TODO*/ }
+            ) }
         }
     }
 }

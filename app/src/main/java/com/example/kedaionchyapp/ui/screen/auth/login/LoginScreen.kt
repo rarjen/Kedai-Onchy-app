@@ -17,11 +17,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
@@ -49,9 +52,12 @@ import com.example.kedaionchyapp.ui.theme.GoldChinese
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 import com.example.kedaionchyapp.ui.theme.RedChinese
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.kedaionchyapp.ui.components.PasswordTextField
 import com.example.kedaionchyapp.ui.navigation.Screen
+
 
 @Composable
 fun LoginScreen(
@@ -62,6 +68,7 @@ fun LoginScreen(
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     val context = LocalContext.current.applicationContext
+    var passwordVisible by remember { mutableStateOf(false) }
 
     val customTextFieldColors = OutlinedTextFieldDefaults.colors(
         // Warna saat Focus (Golden Chinese)
@@ -79,6 +86,29 @@ fun LoginScreen(
         // Warna kursor agar mengikuti tema emas
         cursorColor = GoldChinese
     )
+
+    val trailingIconContent: @Composable () -> Unit = {
+        val image = if (passwordVisible) {
+            Icons.Filled.Visibility
+        } else {
+            Icons.Filled.VisibilityOff
+        }
+
+        IconButton(onClick = { passwordVisible = !passwordVisible }) {
+            Icon(
+                imageVector = image,
+                contentDescription = if (passwordVisible) "Sembunyikan password" else "Tampilkan password"
+            )
+        }
+    }
+
+    val passwordTransformation = if (passwordVisible) {
+        VisualTransformation.None
+    } else {
+        PasswordVisualTransformation()
+    }
+
+
 
     Scaffold() { innerPadding ->
         Column(
@@ -134,22 +164,9 @@ fun LoginScreen(
                     colors = customTextFieldColors
                 )
 
-                OutlinedTextField(
-                    value = password,
-                    onValueChange = { password = it },
-                    label = { Text(text = "Password") },
-                    shape = RoundedCornerShape(10.dp),
-                    modifier = Modifier.fillMaxWidth().padding(bottom = 10.dp),
-                    leadingIcon = {
-                        Icon(imageVector = Icons.Default.Lock, contentDescription = "password")
-                    },
-                    visualTransformation = PasswordVisualTransformation(),
-                    keyboardOptions = KeyboardOptions(
-                        keyboardType = KeyboardType.Password,
-                        imeAction = ImeAction.Done,
-                        autoCorrect = false
-                    ),
-                    colors = customTextFieldColors
+                PasswordTextField(
+                    label = "Password",
+                    contentDescription = "password"
                 )
 
                 Button(

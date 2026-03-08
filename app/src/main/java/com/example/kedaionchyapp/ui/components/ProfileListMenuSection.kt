@@ -18,7 +18,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.kedaionchyapp.ui.theme.ElegantBlack
 import com.example.kedaionchyapp.ui.theme.GoldChinese
+import com.example.kedaionchyapp.ui.theme.IvoryCream
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 
 @Composable
@@ -27,7 +29,7 @@ fun ProfileListMenuSection(
     onClickList: () -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth().background(ElegantBlack)
     ) {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -37,13 +39,13 @@ fun ProfileListMenuSection(
                 text = menu,
                 fontWeight = FontWeight.Normal,
                 fontSize = 14.sp,
-                color = Color.Black
+                color = IvoryCream
             )
 
             Icon(
                 imageVector =  Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = null,
-                tint = Color.Black,
+                tint = IvoryCream,
                 modifier = Modifier.padding(end = 18.dp)
             )
         }

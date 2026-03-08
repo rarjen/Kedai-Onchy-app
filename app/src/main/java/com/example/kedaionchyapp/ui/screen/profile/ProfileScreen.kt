@@ -40,8 +40,10 @@ import com.example.kedaionchyapp.R
 import com.example.kedaionchyapp.ui.components.ClickableCardProfile
 import com.example.kedaionchyapp.ui.components.ProfileListMenuSection
 import com.example.kedaionchyapp.ui.components.ReferralProfileCard
+import com.example.kedaionchyapp.ui.theme.ElegantBlack
 import com.example.kedaionchyapp.ui.theme.GoldChinese
 import com.example.kedaionchyapp.ui.theme.GoldChineseLight
+import com.example.kedaionchyapp.ui.theme.IvoryCream
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 import com.example.kedaionchyapp.ui.theme.RedChinese
 
@@ -62,7 +64,7 @@ fun ProfileScreen(
             .verticalScroll(scrollState)
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().background(Color.White).padding(16.dp)
+            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(16.dp)
         ) {
             ClickableCardProfile(
                 profilePicture = profilePicture,
@@ -82,7 +84,7 @@ fun ProfileScreen(
 
 //        Menu Section top
         Column(
-            modifier = Modifier.fillMaxWidth().background(Color.White).padding(start = 16.dp, end = 16.dp, top = 16.dp)
+            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(start = 16.dp, end = 16.dp, top = 16.dp)
         ) {
             ProfileListMenuSection(
                 menu = "Alamat Tersimpan",
@@ -109,7 +111,7 @@ fun ProfileScreen(
         )
 
         Column(
-            modifier = Modifier.fillMaxWidth().background(Color.White).padding(start = 16.dp, end = 16.dp, top = 16.dp)
+            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(start = 16.dp, end = 16.dp, top = 16.dp)
         ) {
             ProfileListMenuSection(
                 menu = "Syarat dan Ketentuan",
@@ -133,18 +135,18 @@ fun ProfileScreen(
         )
 
         Column(
-            modifier = Modifier.fillMaxWidth().background(Color.White).padding(start = 16.dp, end = 16.dp, top = 10.dp, bottom = 18.dp)
+            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(start = 16.dp, end = 16.dp, top = 10.dp, bottom = 18.dp)
         ) {
             Text(
                 text = "Butuh Bantuan?",
-                color = Color.Black,
+                color = IvoryCream,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = 18.sp
             )
             Text(
                 text = "Hubungi Customer Service kami",
                 fontWeight = FontWeight.Light,
-                color = Color.Black,
+                color = IvoryCream,
                 fontSize = 12.sp
             )
 
@@ -204,12 +206,12 @@ fun ProfileScreen(
 
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth().background(Color.White).padding(16.dp)
+            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(16.dp)
         ) {
             Text(
                 text = "Version ${versionApp}",
                 fontWeight = FontWeight.Normal,
-                color = Color.Gray,
+                color = IvoryCream,
                 fontStyle = FontStyle.Normal,
                 fontFamily = FontFamily.SansSerif
             )
@@ -219,7 +221,7 @@ fun ProfileScreen(
                 color = Color.Red,
                 fontStyle = FontStyle.Normal,
                 fontFamily = FontFamily.SansSerif,
-                fontWeight = FontWeight.Normal
+                fontWeight = FontWeight.SemiBold
             )
         }
 

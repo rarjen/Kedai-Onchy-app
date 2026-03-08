@@ -45,6 +45,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.kedaionchyapp.R
 import com.example.kedaionchyapp.ui.components.PasswordTextField
 import com.example.kedaionchyapp.ui.navigation.Screen
+import com.example.kedaionchyapp.ui.theme.DeepJade
 import com.example.kedaionchyapp.ui.theme.GoldChinese
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 import com.example.kedaionchyapp.ui.theme.RedChinese
@@ -176,7 +177,7 @@ fun RegisterScreen(navController: NavController) {
                 // Button Daftar
                 Button(
                     onClick = { /* Handle Register */ },
-                    colors = ButtonDefaults.buttonColors(containerColor = RedChinese),
+                    colors = ButtonDefaults.buttonColors(containerColor = DeepJade),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.fillMaxWidth().height(50.dp)
                 ) {

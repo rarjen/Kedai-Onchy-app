@@ -57,6 +57,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.kedaionchyapp.ui.components.PasswordTextField
 import com.example.kedaionchyapp.ui.navigation.Screen
+import com.example.kedaionchyapp.ui.theme.DeepJade
 
 
 @Composable
@@ -178,7 +179,7 @@ fun LoginScreen(
                             Toast.makeText(context, "Invalid Credentials", Toast.LENGTH_SHORT).show()
                         }
                     },
-                    colors = ButtonDefaults.buttonColors(RedChinese),
+                    colors = ButtonDefaults.buttonColors(DeepJade),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {

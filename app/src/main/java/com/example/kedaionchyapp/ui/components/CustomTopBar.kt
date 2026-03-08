@@ -13,12 +13,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.kedaionchyapp.ui.theme.DeepJade
+import com.example.kedaionchyapp.ui.theme.IvoryCream
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 
 @Composable
@@ -32,7 +33,7 @@ fun CustomTopBar(
         modifier = Modifier
             .fillMaxWidth()
             .height(56.dp)
-            .background(Color.White)
+            .background(DeepJade)
             .padding(horizontal = 16.dp),
         contentAlignment = Alignment.CenterStart
     ) {
@@ -40,7 +41,7 @@ fun CustomTopBar(
             text = title,
             fontSize = 18.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.Black
+            color = IvoryCream
         )
 
         // Icon di kanan
@@ -52,7 +53,7 @@ fun CustomTopBar(
                 Icon(
                     imageVector = iconVector,
                     contentDescription = "icon",
-                    tint = Color.Black
+                    tint = IvoryCream
                 )
             }
         }

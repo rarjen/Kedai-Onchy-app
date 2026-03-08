@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.kedaionchyapp.ui.components.DashedDivider
 import com.example.kedaionchyapp.ui.theme.ElegantBlack
+import com.example.kedaionchyapp.ui.theme.IvoryCream
 
 @Composable
 fun HeaderVoucherSection(
@@ -37,7 +38,7 @@ fun HeaderVoucherSection(
             Text(
                 text = "$count voucher",
                 fontSize = 12.sp,
-                color = ElegantBlack.copy(alpha = 0.6f)
+                color = IvoryCream.copy(alpha = 0.6f)
             )
         }
         DashedDivider(

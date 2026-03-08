@@ -23,7 +23,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.kedaionchyapp.R
+import com.example.kedaionchyapp.ui.theme.DeepJade
 import com.example.kedaionchyapp.ui.theme.GoldChinese
+import com.example.kedaionchyapp.ui.theme.IvoryCream
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
 import com.example.kedaionchyapp.ui.theme.RedChinese
 
@@ -33,7 +35,7 @@ fun ReferralProfileCard(
 ){
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = Color.White
+            containerColor = Color.Black
         ),
         border = BorderStroke(1.dp, GoldChinese),
         shape = RoundedCornerShape(16.dp),
@@ -51,7 +53,7 @@ fun ReferralProfileCard(
             Image(
                 painter = painterResource(id = R.drawable.referral_icon_card),
                 contentDescription = stringResource(id = R.string.description_referral_icon_card),
-                colorFilter = ColorFilter.tint(RedChinese)
+                colorFilter = ColorFilter.tint(DeepJade)
             )
 
             Column(
@@ -67,7 +69,7 @@ fun ReferralProfileCard(
                     text = stringResource(R.string.description_raferral_icon_card),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Normal,
-                    color = Color.Black,
+                    color = IvoryCream,
                 )
             }
         }

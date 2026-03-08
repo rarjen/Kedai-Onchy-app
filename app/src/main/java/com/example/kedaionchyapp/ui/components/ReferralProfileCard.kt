@@ -24,9 +24,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.kedaionchyapp.R
 import com.example.kedaionchyapp.ui.theme.DeepJade
+import com.example.kedaionchyapp.ui.theme.ElegantBlack
 import com.example.kedaionchyapp.ui.theme.GoldChinese
 import com.example.kedaionchyapp.ui.theme.IvoryCream
 import com.example.kedaionchyapp.ui.theme.KedaiOnchyAppTheme
+import com.example.kedaionchyapp.ui.theme.PremiumGold
 import com.example.kedaionchyapp.ui.theme.RedChinese
 
 @Composable
@@ -35,9 +37,9 @@ fun ReferralProfileCard(
 ){
     Card(
         colors = CardDefaults.cardColors(
-            containerColor = Color.Black
+            containerColor = ElegantBlack
         ),
-        border = BorderStroke(1.dp, GoldChinese),
+        border = BorderStroke(1.dp, PremiumGold),
         shape = RoundedCornerShape(16.dp),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 8.dp,

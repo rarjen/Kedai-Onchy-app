@@ -29,7 +29,7 @@ fun ProfileListMenuSection(
     onClickList: () -> Unit
 ) {
     Column(
-        modifier = Modifier.fillMaxWidth().background(ElegantBlack)
+        modifier = Modifier.fillMaxWidth().background(Color.Black)
     ) {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,

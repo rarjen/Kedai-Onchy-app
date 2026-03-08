@@ -64,7 +64,7 @@ fun ProfileScreen(
             .verticalScroll(scrollState)
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(16.dp)
+            modifier = Modifier.fillMaxWidth().background(Color.Black).padding(16.dp)
         ) {
             ClickableCardProfile(
                 profilePicture = profilePicture,
@@ -78,13 +78,13 @@ fun ProfileScreen(
 
         HorizontalDivider(
             thickness = 4.dp,
-            color = Color.Black,
+            color = ElegantBlack,
             modifier = Modifier.fillMaxWidth()
         )
 
 //        Menu Section top
         Column(
-            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(start = 16.dp, end = 16.dp, top = 16.dp)
+            modifier = Modifier.fillMaxWidth().background(Color.Black).padding(start = 16.dp, end = 16.dp, top = 16.dp)
         ) {
             ProfileListMenuSection(
                 menu = "Alamat Tersimpan",
@@ -106,12 +106,12 @@ fun ProfileScreen(
 
         HorizontalDivider(
             thickness = 4.dp,
-            color = Color.Black,
+            color = ElegantBlack,
             modifier = Modifier.fillMaxWidth()
         )
 
         Column(
-            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(start = 16.dp, end = 16.dp, top = 16.dp)
+            modifier = Modifier.fillMaxWidth().background(Color.Black).padding(start = 16.dp, end = 16.dp, top = 16.dp)
         ) {
             ProfileListMenuSection(
                 menu = "Syarat dan Ketentuan",
@@ -130,12 +130,12 @@ fun ProfileScreen(
 
         HorizontalDivider(
             thickness = 4.dp,
-            color = Color.Black,
+            color = ElegantBlack,
             modifier = Modifier.fillMaxWidth()
         )
 
         Column(
-            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(start = 16.dp, end = 16.dp, top = 10.dp, bottom = 18.dp)
+            modifier = Modifier.fillMaxWidth().background(Color.Black).padding(start = 16.dp, end = 16.dp, top = 10.dp, bottom = 18.dp)
         ) {
             Text(
                 text = "Butuh Bantuan?",
@@ -200,13 +200,13 @@ fun ProfileScreen(
 
         HorizontalDivider(
             thickness = 4.dp,
-            color = Color.Black,
+            color = ElegantBlack,
             modifier = Modifier.fillMaxWidth()
         )
 
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier.fillMaxWidth().background(ElegantBlack).padding(16.dp)
+            modifier = Modifier.fillMaxWidth().background(Color.Black).padding(16.dp)
         ) {
             Text(
                 text = "Version ${versionApp}",
@@ -227,7 +227,7 @@ fun ProfileScreen(
 
         HorizontalDivider(
             thickness = 4.dp,
-            color = Color.Black,
+            color = ElegantBlack,
             modifier = Modifier.fillMaxWidth()
         )
 

@@ -32,9 +32,9 @@ fun CustomTopBar(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(56.dp)
+            .height(86.dp)
             .background(DeepJade)
-            .padding(horizontal = 16.dp),
+            .padding(start = 16.dp, end = 16.dp, top = 24.dp),
         contentAlignment = Alignment.CenterStart
     ) {
         Text(

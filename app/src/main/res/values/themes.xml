@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Theme.KedaiOnchyApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">#000000</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
 
         <item name="android:navigationBarColor">#1A1A1A</item> <item name="android:windowDrawsSystemBarBackgrounds">true</item>
 
